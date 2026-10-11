@@ -72,10 +72,9 @@
   h2 {
     font-size: clamp(18px, 6vw, 25px);
     text-align: center;
-    border-bottom: 1px solid var(--lightsecondary);
     font-weight: 500;
-    padding: 10px;
     color: var(--lightsecondary);
+    margin-bottom: 20px;
   }
 
   h3 {
@@ -111,7 +110,11 @@
     font-size: clamp(38px, 6vw, 58px);
     font-family: var(--font-display);
     text-align: center;
-    margin: 2em;
+    margin: 3em;
+    border-bottom-width: 1px;
+    border-radius: 50px;
+    padding-bottom: 1em;
+    background: linear-gradient(0deg,rgba(42, 131, 95, 0.17) 0%, rgba(139, 187, 146, 0.05) 1%, rgba(255, 255, 255, 0) 100%);
   }
 
   .wrap {
@@ -144,6 +147,7 @@
   .btn:focus-visible {
     border-color: var(--accents);
     color: var(--accents);
+    background: linear-gradient(0deg,rgba(42, 131, 95, 0.17) 0%, rgba(139, 187, 146, 0.05) 1%, rgba(255, 255, 255, 0) 100%);
   }
 
   .linkedin-button,
@@ -225,7 +229,9 @@
     width: 100%;
     padding: 1.25rem 1.5rem;
     border: 1px solid var(--lightsecondary);
+    border-radius: 15px;
     font-weight: 400;
+    background: linear-gradient(0deg,rgba(42, 131, 95, 0.17) 0%, rgba(139, 187, 146, 0.05) 1%, rgba(255, 255, 255, 0) 100%);
   }
 
   .diary-link:hover,
