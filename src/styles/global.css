@@ -7,10 +7,10 @@
    ============================================================ */
 
 :root {
-  --background: #e8e7e7;
+  --background: rgb(221, 255, 226);
   --secondary: rgba(22, 48, 43, 0.322);
-  --lightsecondary: #5c5c5c;
-  --accents: rgba(88, 25, 0, 0.794);
+  --lightsecondary: #2A835F;
+  --accents: #12544F;
   --text: #191a1a;
   --ln-image: url("/website-astro/lnLight.png");
   --git-image: url("/website-astro/gitLight.svg");
@@ -18,11 +18,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #191a1a;
-    --secondary: rgba(22, 48, 43, 0.2);
-    --lightsecondary: #a8a8a8;
-    --accents: rgb(189, 179, 153);
-    --text: #e8e7e7;
+    --background: #030e09;
+    --secondary: #12544F;
+    --lightsecondary: #2A835F;
+    --accents: #8BBB92;
+    --text: rgba(232, 231, 231, 0.84);
     --ln-image: url("/website-astro/lnDark.png");
     --git-image: url("/website-astro/gitDark.svg");
   }
@@ -74,12 +74,15 @@
     text-align: center;
     border-bottom: 1px solid var(--lightsecondary);
     font-weight: 500;
+    padding: 10px;
+    color: var(--lightsecondary);
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
 
   p {
@@ -102,15 +105,9 @@
   }
 }
 
-/* ============================================================
-   4. Components — your named classes.
-   @layer components sits below utilities, so `mb-[18px]` in the
-   markup beats a margin set here. This is the whole reason the
-   file is layered.
-   ============================================================ */
-
 @layer components {
   .hero {
+    color: var(--accents);
     font-size: clamp(38px, 6vw, 58px);
     font-family: var(--font-display);
     text-align: center;
@@ -118,15 +115,13 @@
   }
 
   .wrap {
-    max-width: 60em;
+    max-width: 75em;
     margin: 0 auto;
     padding: clamp(1.5rem, 5vw, 5em);
-    border-inline: 0.01em solid var(--text);
   }
 
   section {
-    padding-block: 76px;
-    border-bottom: 1px solid var(--lightsecondary);
+    padding-block: 30px;
   }
 
   section:last-of-type {
@@ -142,6 +137,7 @@
     gap: 8px;
     color: var(--text);
     border: 1px solid var(--text);
+    border-radius: 20px;
   }
 
   .btn:hover,
@@ -169,33 +165,8 @@
 
   /* Replaces the old bare `.grid` rule, which clashed with
      Tailwind's `.grid` utility. Layout now lives in the markup. */
-  .toolkit-grid {
-    display: grid;
-    gap: 2rem;
-  }
 
-  .skill-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 
-  .skill-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.7em 0;
-  }
-
-  .skill-list .tag {
-    font-size: 0.8em;
-    color: var(--accents);
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-  }
-
-  /* Experience entries: the blurb sits under the role, not beside it */
   .role {
     display: block;
     padding: 0.7em 0;

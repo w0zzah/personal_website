@@ -37,7 +37,7 @@ CREATE TABLE `users` (
   `user_type` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
 ```
 
 ## Step 3: Adding to the Database (Back to java!)

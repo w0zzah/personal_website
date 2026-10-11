@@ -11,34 +11,12 @@ const dateFormat = new Intl.DateTimeFormat("en-NZ", {
   month: "long",
   year: "numeric",
 });
-
-const roles = [
-  {
-    title: "Alpino Cucina e Vino — Bar Manager",
-    years: "2020–2023",
-    blurb:
-      "Often ran a 200–350 cover night, making both on- and off-menu cocktails. Maintained stock and assisted with bar-related finance. Developed key hospitality skills including customer service and working under pressure.",
-  },
-  {
-    title: "Pegasus Bay Winery",
-    years: "2023–2024",
-    blurb:
-      "Branched out from bartending to learn more about wine and how it's made. Worked in the vineyard harvesting, bottling, and selling a collection of elegant wines.",
-  },
-  {
-    title: "Charity Fundraiser — World Vision",
-    years: "2024–2025",
-    blurb:
-      "Door-to-door charity fundraiser working in Melbourne, the Gold Coast, and Brisbane. Strict KPIs targeted towards creating growth led to a driven mentality.",
-  },
-];
 ---
 
 <BaseLayout title="Conrad Wilson — Software Engineer">
 
   <nav class="cta-row" aria-label="Page sections">
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
     <a href="#diary">Coding Diary</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -65,124 +43,55 @@ const roles = [
   <main>
     <div class="wrap">
       <section class="About" id="about">
-        <h2>About</h2>
-
         <div class="grid gap-[clamp(36px,5vw,72px)] md:grid-cols-[1.3fr_1fr]">
           <div>
-            <h3>General Info</h3>
-            <p class="mb-[18px] text-[clamp(17px,2.2vw,20px)] leading-[1.55]">
+            <h2>General Info</h2>
+            <p class="mb-[18px]">
               Hello! I'm Conrad Wilson, a software engineering student at the
               University of Canterbury, studying with the intent to develop and
               expand my current skills.
             </p>
             <p class="mb-[18px]">
-              I chose software engineering because the rapidly changing
-              environment keeps me active and evolving. I love the challenge of
-              learning something new, and that has led me from making games in
-              Godot to learning about raycasting in C.
+              I chose software engineering as the environment
+              keeps me on my feet, and the opportunity to create something
+              from scratch is very fulfilling!
             </p>
             <p class="mb-[18px]">
-              Through school and work I have taken on leadership positions such
-              as joint bar manager and hockey coach. Those opportunities gave me
-              the chance to learn more about working within a team, and how it
-              feels to manage one.
+              While I have enjoyed solo projects, team projects is where my true
+              passion lies. Over the past year I have worked with others to
+              co-develop large projects that were very well received.
             </p>
             <p class="mb-[18px]">
               I'm drawn to work that lets me grow and develop my skills further,
               preferably with real impact and benefit. Outside of study, I spend
               most of my time at the gym or playing video games.
             </p>
-
-            <a class="btn" href="/Conrad-Wilson-CV.pdf" download>Download PDF</a>
-          </div>
-
-          <div class="toolkit-grid">
-            <div>
-              <h3>Coding Languages</h3>
-              <ul class="skill-list">
-                <li>HTML &amp; CSS<span class="tag">3+ years</span></li>
-                <li>Python &amp; Java<span class="tag">2 years</span></li>
-                <li>
-                  C, SQL, JavaScript<span class="tag">Less than a year</span>
-                </li>
-              </ul>
+            <a class="btn" href="src/content/downloads/conrad_wilson_cv.pdf" download>View My CV (PDF)</a>
             </div>
-
             <div>
-              <h3>Conceptual Programming</h3>
-              <ul class="skill-list">
-                <li>Networking<span class="tag">In progress</span></li>
-                <li>Full-stack development<span class="tag">Learning</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3>Applied</h3>
-              <ul class="skill-list">
-                <li>Team collaboration<span class="tag">Strong</span></li>
-                <li>
-                  Client &amp; customer communication<span class="tag"
-                    >Strong</span
-                  >
-                </li>
-                <li>
-                  Working at pace, under pressure<span class="tag">Strong</span>
-                </li>
-                <li>Multitasking<span class="tag">Strong</span></li>
-                <li>Self-motivation<span class="tag">Strong</span></li>
-                <li>Resilience<span class="tag">Strong</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="Experience" id="experience">
-        <h2>Experience</h2>
-
-        <div class="grid gap-[clamp(36px,5vw,72px)] md:grid-cols-[1.3fr_1fr]">
-          <div>
-            <h3>Work Experience</h3>
-            <ul class="skill-list">
-              {
-                roles.map((role) => (
-                  <li class="role">
-                    <span class="role-head">
-                      {role.title}
-                      <span class="tag">{role.years}</span>
-                    </span>
-                    <p class="mt-[10px] max-w-[60ch] text-[clamp(15px,1.8vw,17px)] leading-[1.55] text-muted">
-                      {role.blurb}
+                <h2>Projects</h2>
+                  <div>
+                    <h3>Generate a Pub Crawl!</h3>
+                    <p class="mb-[18px]">
+                     Looking to go for a pub-crawl in Christchurch? Struggling to find the right route?
+                     Well "Route-Beer" has you covered! This university project developed using JavaFX over
+                     6 months with a team of 4 people.
                     </p>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
+                    <a class="btn" href="src/content/downloads/route_beer.zip" download>Download App (Jar File)</a>
+                    <a class="btn" href="https://github.com/w0zzah/Route-Beer" download>View Repository</a>
+                    <h3>Turn based pixel game!</h3>
+                    <p class="mb-[18px]">
+                      "Nun' But Blood" is a turn based rogue-like where each run you hire a party of
+                      saint's to help exorcise demons. Developed using JavaFX with a partner.
+                    </p>
+                    <a class="btn" href="https://github.com/w0zzah/Nun-But-Blood" download>View Repository</a>
 
-          <div>
-            <h3>Last Project</h3>
-            <p class="mb-[18px]">
-              SENG202 project currently in development using Java, JavaFX and fx-css in IntelliJ.
-            </p>
-            <a class="btn" href="/website-astro/Route-Beer.zip" download>Download game</a>
-          </div>
-        </div>
+                  </div>
+            </div>
       </section>
 
       <section class="diary" id="diary">
         <h2>Coding Diary</h2>
-        <p class="diary-intro">
-          Notes from what I'm building and breaking as I go.
-        </p>
-
-        {
-          entries.length === 0 ? (
-            <p class="text-muted">
-              First entry is on its way. Add a <code>.md</code> file to{" "}
-              <code>src/content/diary/</code> and it shows up here.
-            </p>
-          ) : (
             <ul class="diary-list">
               {entries.map((entry) => (
                 <li>
@@ -196,8 +105,6 @@ const roles = [
                 </li>
               ))}
             </ul>
-          )
-        }
       </section>
 
       <section class="contact" id="contact">
