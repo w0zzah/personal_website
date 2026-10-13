@@ -1,6 +1,6 @@
 ---
 title: "Fragmenting a god controller, for a tab pane in JavaFX"    
-date: 2026-10-11  
+date: 2026-10-11
 summary: "Set the controller to implement a Coordinator that  handles between tab communication, and used fx:include in each tab"  
 ---
 ## The Problem?
