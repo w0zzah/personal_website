@@ -12,8 +12,8 @@
   --lightsecondary: #2A835F;
   --accents: #12544F;
   --text: #191a1a;
-  --ln-image: url("/website-astro/lnLight.png");
-  --git-image: url("/website-astro/gitLight.svg");
+  --ln-image: url("/personal_website/lnLight.png");
+  --git-image: url("/personal_website/gitLight.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +23,8 @@
     --lightsecondary: #2A835F;
     --accents: #8BBB92;
     --text: rgba(232, 231, 231, 0.84);
-    --ln-image: url("/website-astro/lnDark.png");
-    --git-image: url("/website-astro/gitDark.svg");
+    --ln-image: url("/personal_website/lnDark.png");
+    --git-image: url("/personal_website/gitDark.svg");
   }
 }
 

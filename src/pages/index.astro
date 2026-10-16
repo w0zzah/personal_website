@@ -95,7 +95,7 @@ const dateFormat = new Intl.DateTimeFormat("en-NZ", {
             <ul class="diary-list">
               {entries.map((entry) => (
                 <li>
-                  <a class="diary-link" href={`/website-astro/diary/${entry.id}/`}>
+                  <a class="diary-link" href={`/personal_website/diary/${entry.id}/`}>
                     <time datetime={entry.data.date.toISOString()}>
                       {dateFormat.format(entry.data.date)}
                     </time>
